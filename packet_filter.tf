@@ -1,11 +1,11 @@
 variable "ssh_source_network" {
-  default = "0.0.0.0/0"
+  default = null
 }
 variable "ssh_public_port" {
   default = 2345
 }
 variable "ntp_source_network" {
-  default = "0.0.0.0/0"
+  default = null
 }
 
 
