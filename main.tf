@@ -11,8 +11,3 @@
 provider "sakuracloud" {
   zone = "tk1v"
 }
-
-#コピー元アーカイブの定義
-data "sakuracloud_archive" "debian" {
-  os_type = "debian10"
-}
