@@ -8,7 +8,6 @@ variable "ntp_source_network" {
   default = null
 }
 
-
 resource "sakuracloud_packet_filter" "default" {
   name = "default"
 

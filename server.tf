@@ -1,3 +1,7 @@
+variable "server_root_password" {
+  default = "p@33w0Rd_n0T_F0und"
+}
+
 data "sakuracloud_archive" "buster" {
   os_type = "debian10"
 }
@@ -24,7 +28,8 @@ resource "sakuracloud_server" "web" {
   ]
 
   hostname = "histudy.jp"
-  password = "p@55w0rd"
+  password = var.server_root_password
+
   # SSH接続でのパスワード/チャレンジレスポンス認証無効化
   disable_pw_auth = true
 
