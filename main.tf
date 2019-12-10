@@ -11,3 +11,7 @@
 provider "sakuracloud" {
   zone = "tk1v"
 }
+
+output "ip_address" {
+  value = sakuracloud_server.web.ipaddress
+}
