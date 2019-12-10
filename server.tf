@@ -22,7 +22,7 @@ resource "sakuracloud_server" "web" {
   #メモリサイズ(GB)
   memory = 1
 
-  #パケットフィルタ
+  # パケットフィルタ
   packet_filter_ids = [
     sakuracloud_packet_filter.default.id,
   ]

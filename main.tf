@@ -1,15 +1,15 @@
-# terraform {
-#   backend "remote" {
-#     hostname     = "app.terraform.io"
-#     organization = "histudy"
-#     workspaces {
-#       name = "sakura"
-#     }
-#   }
-# }
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "histudy"
+    workspaces {
+      name = "sakura"
+    }
+  }
+}
 
 provider "sakuracloud" {
-  zone = "tk1v"
+  zone = "is1b"
 }
 
 output "ip_address" {
