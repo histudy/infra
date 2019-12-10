@@ -23,9 +23,7 @@ resource "sakuracloud_server" "web" {
   memory = 1
 
   # パケットフィルタ
-  packet_filter_ids = [
-    sakuracloud_packet_filter.default.id,
-  ]
+  packet_filter_ids = []
 
   hostname = "histudy.jp"
   password = var.server_root_password
