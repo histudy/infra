@@ -1,9 +1,6 @@
 variable "ssh_source_network" {
   default = null
 }
-variable "ssh_public_port" {
-  default = 2345
-}
 variable "ntp_source_network" {
   default = null
 }
@@ -14,14 +11,12 @@ resource "sakuracloud_packet_filter" "default" {
   expressions {
     description = "HTTP"
     protocol    = "tcp"
-    source_port = "80"
     dest_port   = "80"
     allow       = true
   }
   expressions {
     description = "HTTPS"
     protocol    = "tcp"
-    source_port = "443"
     dest_port   = "443"
     allow       = true
   }
@@ -80,7 +75,6 @@ resource "sakuracloud_packet_filter" "default" {
     description = "SSH"
     protocol    = "tcp"
     source_nw   = var.ssh_source_network
-    source_port = var.ssh_public_port
     dest_port   = "22"
     allow       = true
   }
