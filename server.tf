@@ -34,7 +34,6 @@ resource "sakuracloud_server" "web" {
   #SSH公開鍵
   ssh_key_ids = [
     sakuracloud_ssh_key.wate.id,
-    sakuracloud_ssh_key.t223n.id,
     sakuracloud_ssh_key.sperkbird.id
   ]
 }
