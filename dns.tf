@@ -3,12 +3,12 @@ resource "sakuracloud_dns" "default" {
   records {
     name  = "@"
     type  = "A"
-    value = "133.223.7.42"
+    value = sakuracloud_server.web.ipaddress
   }
   records {
     name  = "www"
     type  = "A"
-    value = "133.223.7.42"
+    value = sakuracloud_server.web.ipaddress
   }
   records {
     name     = "@"
